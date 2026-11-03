@@ -70,7 +70,7 @@ section { position: relative; scroll-margin-top: 70px; }
 .hero-word span { display: inline-block; opacity: 0; transform: translateY(110%); background: linear-gradient(180deg, #f0373b 0%, #c41f24 55%, #6e0f12 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 body.ready .hero-word span { animation: rise 1s cubic-bezier(0.2, 0.7, 0.2, 1) forwards; animation-delay: calc(var(--i) * 0.06s + 0.2s); }
 @keyframes rise { to { opacity: 1; transform: none; } }
-.hero-photo { position: absolute; bottom: 0; left: 50%; width: min(560px, 46vw); transform: translate(-8%, 30px); opacity: 0; z-index: 2; filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.6)); -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent); mask-image: linear-gradient(to bottom, #000 82%, transparent); transition: opacity 1.2s ease 0.6s, transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1) 0.6s; }
+.hero-photo { position: absolute; bottom: 0; left: 50%; width: min(560px, 46vw, 66svh); height: auto; transform: translate(-8%, 30px); opacity: 0; z-index: 2; filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.6)); -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent); mask-image: linear-gradient(to bottom, #000 82%, transparent); transition: opacity 1.2s ease 0.6s, transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1) 0.6s; }
 body.ready .hero-photo { opacity: 1; transform: translate(-8%, 0); }
 .hero-copy { position: relative; z-index: 3; padding-left: clamp(48px, 8vw, 120px); max-width: 560px; }
 .hero-copy > * { opacity: 0; transform: translateY(30px); transition: opacity 0.9s, transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1); }
@@ -102,7 +102,7 @@ body.ready .hero-copy > :nth-child(1) { transition-delay: 0.4s; }
 .about { padding: 140px 0 120px; }
 .about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 70px; align-items: center; }
 .about-photo { position: relative; aspect-ratio: 4 / 5; border-radius: 6px; overflow: hidden; background: linear-gradient(160deg, var(--red) 0%, var(--red-dark) 60%, #2a0607 100%); }
-.about-photo img { position: absolute; bottom: 0; left: 50%; width: 92%; transform: translateX(-50%); transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); filter: grayscale(0.15) contrast(1.05); }
+.about-photo img { position: absolute; bottom: 0; left: 50%; width: 92%; height: auto; transform: translateX(-50%); transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); filter: grayscale(0.15) contrast(1.05); }
 .about-photo:hover img { transform: translateX(-50%) scale(1.05); }
 .about-badge { position: absolute; top: 18px; left: 18px; background: var(--bg); padding: 10px 14px; border-radius: 4px; font: 700 10px/1.3 var(--body); letter-spacing: 0.2em; color: var(--muted); }
 .about-badge b { font: 400 30px var(--display); color: var(--text); letter-spacing: 0.02em; }
@@ -183,12 +183,12 @@ body.ready .hero-copy > :nth-child(1) { transition-delay: 0.4s; }
   .links a { padding: 12px 0; }
   .menu { display: block; }
   .nav-cta, .side-dots { display: none; }
-  .hero { align-items: flex-start; padding-top: 110px; min-height: 100svh; }
-  .hero-word { top: auto; bottom: 30%; transform: translateX(-50%); font-size: 30vw; }
-  .hero-photo { width: 78vw; left: 50%; transform: translate(-30%, 30px); }
-  body.ready .hero-photo { transform: translate(-30%, 0); }
+  .hero { flex-direction: column; align-items: stretch; padding-top: 110px; min-height: auto; }
+  .hero-word { top: auto; bottom: 12%; left: 50%; transform: translateX(-50%); font-size: 30vw; }
+  .hero-photo { position: relative; order: 2; left: auto; width: min(82vw, 420px); margin: 30px auto 0; transform: translateY(30px); }
+  body.ready .hero-photo { transform: none; }
+  .scroll-cue { display: none; }
   .hero-copy { padding-left: 44px; padding-right: 20px; }
-  .lead { max-width: 60%; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .about-photo { max-width: 420px; }
   .grid { grid-template-columns: 1fr 1fr; }
@@ -199,8 +199,6 @@ body.ready .hero-copy > :nth-child(1) { transition-delay: 0.4s; }
 }
 @media (max-width: 560px) {
   .grid { grid-template-columns: 1fr; }
-  .lead { max-width: 100%; }
-  .hero-photo { opacity: 0.55 !important; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
