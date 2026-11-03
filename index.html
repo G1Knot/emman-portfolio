@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EMMAN | Web Developer &amp; Designer</title>
+  <meta name="description" content="Portfolio of Emman Harold Aleria, a 23-year-old BSCS 3B student, web developer and multimedia designer from Abihilan, Candijay, Bohol.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="intro" id="intro" aria-hidden="true">
+    <span class="intro-name">EMMAN<b>.</b></span>
+    <span class="intro-line"></span>
+  </div>
+
+  <header class="nav" id="nav">
+    <a href="#home" class="logo">EMMAN<b>.</b></a>
+    <nav class="links" id="links">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="nav-cta">Let's Talk</a>
+    <button class="menu" id="menu" aria-expanded="false" aria-controls="links">Menu</button>
+  </header>
+
+  <aside class="side-dots" aria-label="Sections">
+    <a href="#home" data-dot="home" class="on" aria-label="Home"><span>01</span></a>
+    <a href="#about" data-dot="about" aria-label="About"><span>02</span></a>
+    <a href="#work" data-dot="work" aria-label="Work"><span>03</span></a>
+    <a href="#services" data-dot="services" aria-label="Services"><span>04</span></a>
+    <a href="#contact" data-dot="contact" aria-label="Contact"><span>05</span></a>
+  </aside>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-word" id="heroWord" aria-hidden="true">
+        <span>P</span><span>O</span><span>R</span><span>T</span><span>F</span><span>O</span><span>L</span><span>I</span><span>O</span>
+      </div>
+      <img class="hero-photo" id="heroPhoto" src="assets/emman.webp" alt="Emman Harold Aleria" width="900" height="1117">
+      <div class="hero-copy">
+        <p class="tagline"><span>Web Developer / Designer</span><span>Digital Storyteller</span></p>
+        <p class="hello">Hello, I'm</p>
+        <h1 class="name">EMMAN<b>.</b></h1>
+        <p class="role">Developer &amp;<br>Designer</p>
+        <p class="lead">Turning ideas into websites and visuals that feel real. I take a concept from the first sketch to the final pixel — clean code, bold design, and a story in every screen.</p>
+        <a href="#work" class="btn magnetic">View my work <span aria-hidden="true">↓</span></a>
+        <p class="pin"><span aria-hidden="true">●</span> Abihilan, Candijay, Bohol</p>
+      </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Web Development</span><span>UI / UX Design</span><span>Graphic Design</span><span>Video Editing</span><span>Branding</span><span>BSCS 3B</span>
+        <span>Web Development</span><span>UI / UX Design</span><span>Graphic Design</span><span>Video Editing</span><span>Branding</span><span>BSCS 3B</span>
+      </div>
+    </div>
+
+    <section class="about" id="about">
+      <div class="wrap about-grid">
+        <div class="about-photo reveal">
+          <img src="assets/emman.webp" alt="" width="900" height="1117" loading="lazy">
+          <span class="about-badge">BSCS<br><b>3B</b></span>
+        </div>
+        <div>
+          <p class="kicker reveal">01 — About me</p>
+          <h2 class="title reveal">THE STORY<br><em>BEHIND</em> THE SCREEN</h2>
+          <p class="body-text reveal">I'm <b>Emman Harold Aleria</b>, a 23-year-old BS Computer Science student (3B) from Abihilan, Candijay, Bohol. I build websites that work as good as they look, and I design the posters, layouts and videos that bring them to life.</p>
+          <p class="body-text reveal">For me, every project is a story: understand the people, find the idea, then craft it frame by frame and line by line until it feels right.</p>
+          <div class="stats reveal">
+            <div><b data-count="23">0</b><span>Years old</span></div>
+            <div><b data-count="18" data-plus>0</b><span>Projects done</span></div>
+            <div><b data-count="3" data-plus>0</b><span>Years creating</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work" id="work">
+      <div class="wrap">
+        <p class="kicker reveal">02 — Selected work</p>
+        <div class="work-head">
+          <h2 class="title reveal">WORK THAT<br><em>SPEAKS</em></h2>
+          <div class="filters reveal" role="tablist" aria-label="Filter projects">
+            <button class="active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button data-filter="web" role="tab" aria-selected="false">Web</button>
+            <button data-filter="design" role="tab" aria-selected="false">Design</button>
+            <button data-filter="video" role="tab" aria-selected="false">Video</button>
+            <button data-filter="mobile" role="tab" aria-selected="false">Mobile</button>
+          </div>
+        </div>
+        <div class="grid" id="grid"><!-- filled by script.js --></div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="wrap">
+        <p class="kicker reveal">03 — What I do</p>
+        <h2 class="title reveal">SKILLS &amp;<br><em>SERVICES</em></h2>
+        <div class="service-list">
+          <article class="service reveal"><span class="num">01</span><h3>Web Development</h3><p>Responsive websites and web apps with HTML, CSS, JavaScript and PHP, from landing pages to full systems with databases.</p><span class="arrow" aria-hidden="true">↗</span></article>
+          <article class="service reveal"><span class="num">02</span><h3>UI / UX Design</h3><p>Wireframes, flows and polished interfaces in Figma, designed around how people actually use them.</p><span class="arrow" aria-hidden="true">↗</span></article>
+          <article class="service reveal"><span class="num">03</span><h3>Graphic Design</h3><p>Posters, social media kits, logos and pubmats for schools, events and small businesses.</p><span class="arrow" aria-hidden="true">↗</span></article>
+          <article class="service reveal"><span class="num">04</span><h3>Video Editing</h3><p>Short-form edits, event highlights and promo videos with clean cuts, motion text and color grading.</p><span class="arrow" aria-hidden="true">↗</span></article>
+        </div>
+        <div class="tools reveal">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>Java</span><span>Python</span><span>Figma</span><span>Photoshop</span><span>Canva</span><span>Premiere Pro</span><span>CapCut</span><span>Git</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-word" aria-hidden="true">CONTACT</div>
+      <div class="wrap contact-inner">
+        <p class="kicker reveal">04 — Get in touch</p>
+        <h2 class="contact-title reveal">LET'S MAKE<br>SOMETHING <em>REAL.</em></h2>
+        <a class="mail reveal" href="mailto:emmanharold.aleria@bisu.edu.ph">emmanharold.aleria@bisu.edu.ph <span aria-hidden="true">↗</span></a>
+        <p class="pin reveal"><span aria-hidden="true">●</span> Abihilan, Candijay, Bohol, Philippines · Open for projects</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Emman Harold Aleria</span>
+    <a href="#home" class="to-top">Back to top ↑</a>
+  </footer>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <div class="modal-thumb" id="modalThumb"></div>
+      <div class="modal-body">
+        <p class="kicker" id="modalCat"></p>
+        <h3 id="modalTitle"></h3>
+        <p id="modalText"></p>
+        <div class="modal-tags" id="modalTags"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
